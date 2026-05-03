@@ -131,7 +131,7 @@ export default function App() {
 
   function startTimer(n: number) {
     clearTimer()
-    const total = n * SECS_PER_GOAL
+    const total = Math.max(n * SECS_PER_GOAL,3)
     setTimeLeft(total)
     intervalRef.current = setInterval(() => {
       setTimeLeft(t => {
